@@ -1,43 +1,4 @@
-<script type="text/javascript">
-        var gk_isXlsx = false;
-        var gk_xlsxFileLookup = {};
-        var gk_fileData = {};
-        function filledCell(cell) {
-          return cell !== '' && cell != null;
-        }
-        function loadFileData(filename) {
-        if (gk_isXlsx && gk_xlsxFileLookup[filename]) {
-            try {
-                var workbook = XLSX.read(gk_fileData[filename], { type: 'base64' });
-                var firstSheetName = workbook.SheetNames[0];
-                var worksheet = workbook.Sheets[firstSheetName];
-
-                // Convert sheet to JSON to filter blank rows
-                var jsonData = XLSX.utils.sheet_to_json(worksheet, { header: 1, blankrows: false, defval: '' });
-                // Filter out blank rows (rows where all cells are empty, null, or undefined)
-                var filteredData = jsonData.filter(row => row.some(filledCell));
-
-                // Heuristic to find the header row by ignoring rows with fewer filled cells than the next row
-                var headerRowIndex = filteredData.findIndex((row, index) =>
-                  row.filter(filledCell).length >= filteredData[index + 1]?.filter(filledCell).length
-                );
-                // Fallback
-                if (headerRowIndex === -1 || headerRowIndex > 25) {
-                  headerRowIndex = 0;
-                }
-
-                // Convert filtered JSON back to CSV
-                var csv = XLSX.utils.aoa_to_sheet(filteredData.slice(headerRowIndex)); // Create a new sheet from filtered array of arrays
-                csv = XLSX.utils.sheet_to_csv(csv, { header: 1 });
-                return csv;
-            } catch (e) {
-                console.error(e);
-                return "";
-            }
-        }
-        return gk_fileData[filename] || "";
-        }
-        </script><!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -167,7 +128,7 @@
         .hero {
             position: relative;
             height: 80vh;
-            background: url('https://images.unsplash.com/photo-1503043701580-97c8e4d6a3f8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&h=600&q=80') center/cover no-repeat;
+            background: url('albania.jpg') center/cover no-repeat;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -480,6 +441,46 @@
     </style>
 </head>
 <body>
+    <script type="text/javascript">
+        var gk_isXlsx = false;
+        var gk_xlsxFileLookup = {};
+        var gk_fileData = {};
+        function filledCell(cell) {
+          return cell !== '' && cell != null;
+        }
+        function loadFileData(filename) {
+        if (gk_isXlsx && gk_xlsxFileLookup[filename]) {
+            try {
+                var workbook = XLSX.read(gk_fileData[filename], { type: 'base64' });
+                var firstSheetName = workbook.SheetNames[0];
+                var worksheet = workbook.Sheets[firstSheetName];
+
+                // Convert sheet to JSON to filter blank rows
+                var jsonData = XLSX.utils.sheet_to_json(worksheet, { header: 1, blankrows: false, defval: '' });
+                // Filter out blank rows (rows where all cells are empty, null, or undefined)
+                var filteredData = jsonData.filter(row => row.some(filledCell));
+
+                // Heuristic to find the header row by ignoring rows with fewer filled cells than the next row
+                var headerRowIndex = filteredData.findIndex((row, index) =>
+                  row.filter(filledCell).length >= filteredData[index + 1]?.filter(filledCell).length
+                );
+                // Fallback
+                if (headerRowIndex === -1 || headerRowIndex > 25) {
+                  headerRowIndex = 0;
+                }
+
+                // Convert filtered JSON back to CSV
+                var csv = XLSX.utils.aoa_to_sheet(filteredData.slice(headerRowIndex)); // Create a new sheet from filtered array of arrays
+                csv = XLSX.utils.sheet_to_csv(csv, { header: 1 });
+                return csv;
+            } catch (e) {
+                console.error(e);
+                return "";
+            }
+        }
+        return gk_fileData[filename] || "";
+        }
+    </script>
     <!-- Header Section -->
     <header class="header">
         <div class="date-button">May 13-17, 21:00 CEST</div>
@@ -517,9 +518,9 @@
 
     <!-- Basel 2025 Section -->
     <section id="basel" class="section">
-        <h2>Basel 2025</h2>
-        <img src="https://images.unsplash.com/photo-1503043701580-97c8e4d6a3f8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=400&q=80" alt="Basel cityscape">
-        <p>Join us in Basel, Switzerland, for Rovision 2025! The event will light up St. Jakobshalle from May 13-17, 2025, with stunning performances along the Rhine. Expect a vibrant Eurovision Village and more!</p>
+        <h2>Robloxia 2025</h2>
+        <img src="no.png" alt="Basel cityscape">
+        <p>Join us in Robloxia, Roblox, for Rovision 2025! The event will light up at the St. Joel Halle from May 25 - June 17, 2025, with stunning performances along the Rhine. Expect a vibrant Rovision Village and more!</p>
     </section>
 
     <!-- Latest - Newsletters Section -->
@@ -529,17 +530,17 @@
             <button class="carousel-arrow arrow-left" onclick="scrollCarousel(-1)">❮</button>
             <div class="newsletter-carousel" id="newsletterCarousel">
                 <!-- Newsletter Entry 1 -->
-                <div class="newsletter-item" onclick="openModal('Rehearsals Kick Off!', 'Full details about the rehearsals starting at 11:38 AM CEST, May 25, 2025. Artists are preparing for an unforgettable show with stunning stage setups!')">
-                    <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=150&q=80" alt="Rehearsal stage">
+                <div class="newsletter-item" onclick="openModal('Rehearsals, kick off!', 'Artists are preparing to get qualified for the grand final - who will win and who will lose?')">
+                    <img src="albania.jpg" alt="Rehearsal stage">
                     <div class="newsletter-content">
-                        <h3>Rehearsals Kick Off!</h3>
-                        <p>Artists are preparing for an unforgettable show!</p>
-                        <span class="date">May 25, 2025</span>
+                        <h3>Albania's Masterpiece</h3>
+                        <p>Recently, Albania surprised the whole jury and public with their amazing song. "Zjerm" by Shkodra Elektronike is an amazing song teaching you what the real world really is. Beatrice Gjerg on Roblox sang this song in Rehearsal 2, and we're proud to make her the winner. No confetti this time tho!</p>
+                        <span class="date">May 26, 2025</span>
                     </div>
                 </div>
                 <!-- Newsletter Entry 2 -->
                 <div class="newsletter-item" onclick="openModal('Stage Setup Unveiled', 'The stage design for Rovision 2025 has been revealed! Check out the innovative lighting and effects planned for the event.')">
-                    <img src="https://images.unsplash.com/photo-1517248135467-4c7ed197b9c2?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=150&q=80" alt="Stage setup">
+                    <img src="yes.png" alt="Stage setup">
                     <div class="newsletter-content">
                         <h3>Stage Setup Unveiled</h3>
                         <p>Check out the innovative stage design!</p>
@@ -584,10 +585,8 @@
         <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=400&q=80" alt="Musical performance">
         <p>Check out the amazing songs for Rovision 2025! From pop hits to soulful ballads, here are some highlights:</p>
         <ul id="songList">
-            <li>Northern Lights - Denmark</li>
-            <li>Fuoco Vivo - Italy</li>
-            <li>Resilience - Ukraine</li>
-            <li>Electric Dreams - UK</li>
+            <li>Zjerm - Albania</li>
+            <li>Serving - Malta</li>
         </ul>
     </section>
 
@@ -605,10 +604,8 @@
             <span class="close-modal" onclick="closeParticipantsModal()">×</span>
             <h3>Participants List</h3>
             <ul>
-                <li>Luna Sørensen - Denmark</li>
-                <li>Mateo Rossi - Italy</li>
-                <li>Anya Volkov - Ukraine</li>
-                <li>Eliot James - United Kingdom</li>
+                <li>🇦🇱 Albania: Shkodra Elektronike</li>
+                <li>🇲🇹 Malta: Missygirlf</li>
             </ul>
         </div>
     </div>
@@ -629,13 +626,13 @@
     <section id="history" class="section">
         <h2>History</h2>
         <img src="https://images.unsplash.com/photo-1506157786151-b8491531f063?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=400&q=80" alt="Historical event">
-        <p>Rovision began in 2021, uniting nations through music. Relive past victories and memorable moments from this growing celebration!</p>
+        <p>Rovision began in 2025, uniting nations through music. Relive past victories and memorable moments from this growing celebration!</p>
     </section>
 
     <!-- About Section -->
     <section id="about" class="section">
         <h2>About</h2>
-        <img src="https://images.unsplash.com/photo-1517248135467-4c7ed197b9c2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=400&q=80" alt="Event overview">
+        <img src="maybe.png" alt="Event overview">
         <p>Rovision 2025 is all about bringing cultures together through music! Hosted in Basel, expect a spectacular show with diverse performances and global unity.</p>
     </section>
 
