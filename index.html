@@ -1,447 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Rovision Song Contest 2025 in Basel, Switzerland - Join us from May 13-17, 2025 for an epic celebration!">
-    <title>Rovision Song Contest 2025</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@700&family=Noto+Sans&display=swap" rel="stylesheet">
-    <style>
-        /* Reset and General Styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Noto Sans', sans-serif;
-            background-color: #f5f5f5;
-            color: #333;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        /* Header Section */
-        .header {
-            background: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&h=200&q=80') center/cover no-repeat;
-            position: relative;
-            padding: 1rem 0;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: 2px solid #ff4d4d;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .logo-container {
-            flex: 1;
-            text-align: center;
-        }
-
-        .logo {
-            font-family: 'Roboto Mono', monospace;
-            font-size: 2.5rem;
-            color: #fff;
-            text-transform: uppercase;
-            display: inline-flex;
-            align-items: center;
-            text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-        }
-
-        .logo .heart {
-            color: #ff4d4d;
-            font-size: 1.8rem;
-            margin: 0 0.2rem;
-        }
-
-        .logo .subtitle {
-            font-size: 1rem;
-            margin-top: 0.3rem;
-            display: block;
-            color: #fff;
-        }
-
-        .date-button {
-            background: #ff4d4d;
-            border: none;
-            border-radius: 20px;
-            padding: 0.5rem 1rem;
-            font-size: 0.9rem;
-            color: #fff;
-            cursor: pointer;
-            transition: background 0.3s ease;
-        }
-
-        .date-button:hover {
-            background: #e60000;
-        }
-
-        .header-buttons {
-            display: flex;
-            gap: 1rem;
-            align-items: center;
-        }
-
-        .search-icon {
-            font-size: 1.2rem;
-            color: #fff;
-            cursor: pointer;
-            transition: color 0.3s ease;
-        }
-
-        .search-icon:hover {
-            color: #ff4d4d;
-        }
-
-        /* Navigation Section */
-        .nav {
-            background: #fff;
-            padding: 0.5rem 0;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-
-        .nav-links {
-            display: flex;
-            justify-content: center;
-            gap: 1.5rem;
-            list-style: none;
-        }
-
-        .nav-links a {
-            color: #333;
-            text-decoration: none;
-            font-size: 1rem;
-            text-transform: uppercase;
-            transition: color 0.3s ease;
-        }
-
-        .nav-links a:hover {
-            color: #ff4d4d;
-        }
-
-        /* Hero Section */
-        .hero {
-            position: relative;
-            height: 80vh;
-            background: url('albania.jpg') center/cover no-repeat;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: #fff;
-            text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-        }
-
-        .hero-overlay {
-            background: rgba(0, 0, 0, 0.4);
-            padding: 2rem;
-            border-radius: 10px;
-        }
-
-        .hero-overlay h1 {
-            font-family: 'Roboto Mono', monospace;
-            font-size: 4rem;
-            margin-bottom: 1rem;
-        }
-
-        .hero-overlay p {
-            font-size: 1.5rem;
-        }
-
-        /* Section Styles */
-        .section {
-            padding: 4rem 0;
-            background: #fff;
-            text-align: center;
-            border-bottom: 1px solid #eee;
-        }
-
-        .section h2 {
-            font-family: 'Roboto Mono', monospace;
-            font-size: 2.5rem;
-            margin-bottom: 2rem;
-            color: #ff4d4d;
-        }
-
-        .section p {
-            font-size: 1.1rem;
-            max-width: 800px;
-            margin: 0 auto 1.5rem;
-            color: #666;
-        }
-
-        .section ul {
-            list-style: none;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 1rem;
-            padding: 1rem 0;
-        }
-
-        .section ul li {
-            background: #ff4d4d;
-            color: #fff;
-            padding: 0.5rem 1rem;
-            border-radius: 20px;
-            transition: background 0.3s ease;
-        }
-
-        .section ul li:hover {
-            background: #e60000;
-        }
-
-        .section img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            margin-bottom: 1.5rem;
-        }
-
-        /* Newsletter Carousel Section */
-        .newsletter-section {
-            padding: 4rem 0;
-            background: #fff;
-            text-align: center;
-            border-bottom: 1px solid #eee;
-        }
-
-        .newsletter-section h2 {
-            font-family: 'Roboto Mono', monospace;
-            font-size: 2.5rem;
-            margin-bottom: 2rem;
-            color: #ff4d4d;
-        }
-
-        .carousel-container {
-            position: relative;
-            max-width: 1200px;
-            margin: 0 auto;
-            overflow: hidden;
-        }
-
-        .newsletter-carousel {
-            display: flex;
-            transition: transform 0.5s ease;
-            cursor: grab;
-        }
-
-        .newsletter-carousel.grabbing {
-            cursor: grabbing;
-        }
-
-        .newsletter-item {
-            min-width: 300px;
-            background: #f9f9f9;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            margin: 0 10px;
-            cursor: pointer;
-            transition: transform 0.3s ease;
-        }
-
-        .newsletter-item:hover {
-            transform: scale(1.05);
-        }
-
-        .newsletter-item img {
-            width: 100%;
-            height: 150px;
-            object-fit: cover;
-        }
-
-        .newsletter-content {
-            padding: 1rem;
-            text-align: left;
-        }
-
-        .newsletter-content h3 {
-            font-family: 'Roboto Mono', monospace;
-            font-size: 1.3rem;
-            color: #ff4d4d;
-            margin-bottom: 0.5rem;
-        }
-
-        .newsletter-content p {
-            font-size: 0.9rem;
-            color: #666;
-            margin-bottom: 0.5rem;
-        }
-
-        .newsletter-content .date {
-            font-size: 0.8rem;
-            color: #999;
-        }
-
-        .carousel-arrow {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background: rgba(255, 77, 77, 0.8);
-            color: #fff;
-            border: none;
-            padding: 0.5rem 1rem;
-            cursor: pointer;
-            font-size: 1.5rem;
-            border-radius: 50%;
-            transition: background 0.3s ease;
-        }
-
-        .carousel-arrow:hover {
-            background: #e60000;
-        }
-
-        .arrow-left {
-            left: 10px;
-        }
-
-        .arrow-right {
-            right: 10px;
-        }
-
-        /* Modal Styles */
-        .modal {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.7);
-            z-index: 1000;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .modal-content {
-            background: #fff;
-            padding: 2rem;
-            border-radius: 10px;
-            max-width: 600px;
-            width: 90%;
-            position: relative;
-            text-align: center;
-        }
-
-        .modal-content h3 {
-            font-family: 'Roboto Mono', monospace;
-            font-size: 1.8rem;
-            color: #ff4d4d;
-            margin-bottom: 1rem;
-        }
-
-        .modal-content p {
-            font-size: 1rem;
-            color: #666;
-            margin-bottom: 1rem;
-        }
-
-        .modal-content ul {
-            list-style: none;
-            text-align: left;
-            padding: 0;
-        }
-
-        .modal-content ul li {
-            font-size: 1rem;
-            color: #333;
-            margin-bottom: 0.5rem;
-        }
-
-        .close-modal {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            font-size: 1.5rem;
-            color: #333;
-            cursor: pointer;
-            transition: color 0.3s ease;
-        }
-
-        .close-modal:hover {
-            color: #ff4d4d;
-        }
-
-        /* Button Styles */
-        .view-btn {
-            background: #ff4d4d;
-            color: #fff;
-            border: none;
-            padding: 0.8rem 1.5rem;
-            border-radius: 20px;
-            cursor: pointer;
-            font-size: 1rem;
-            transition: background 0.3s ease;
-        }
-
-        .view-btn:hover {
-            background: #e60000;
-        }
-
-        /* Social Links */
-        .social-links a {
-            color: #ff4d4d;
-            text-decoration: none;
-            font-weight: bold;
-            transition: color 0.3s ease;
-        }
-
-        .social-links a:hover {
-            color: #e60000;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .header {
-                flex-direction: column;
-                gap: 1rem;
-            }
-
-            .logo {
-                font-size: 2rem;
-            }
-
-            .logo .heart {
-                font-size: 1.5rem;
-            }
-
-            .logo .subtitle {
-                font-size: 0.8rem;
-            }
-
-            .nav-links {
-                flex-direction: column;
-                gap: 0.5rem;
-                padding: 1rem 0;
-            }
-
-            .hero-overlay h1 {
-                font-size: 2.5rem;
-            }
-
-            .hero-overlay p {
-                font-size: 1.2rem;
-            }
-
-            .section h2, .newsletter-section h2 {
-                font-size: 2rem;
-            }
-
-            .newsletter-item {
-                min-width: 250px;
-            }
-        }
-    </style>
-</head>
-<body>
-    <script type="text/javascript">
+<script type="text/javascript">
         var gk_isXlsx = false;
         var gk_xlsxFileLookup = {};
         var gk_fileData = {};
@@ -480,265 +37,840 @@
         }
         return gk_fileData[filename] || "";
         }
-    </script>
-    <!-- Header Section -->
-    <header class="header">
-        <div class="date-button">May 13-17, 21:00 CEST</div>
-        <div class="logo-container">
-            <h1 class="logo">
-                Rovision <span class="heart">♥</span>
-                <span class="subtitle">Song Contest</span>
-            </h1>
+        </script><!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PriveTube</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #0f0f0f;
+            color: #ffffff;
+        }
+        .light-theme {
+            background-color: #ffffff;
+            color: #0f0f0f;
+        }
+        .light-theme .video-item, .light-theme .history-item {
+            background-color: #f9f9f9;
+        }
+        .light-theme .logo, .light-theme .search-input {
+            color: #0f0f0f;
+        }
+        .light-theme .search-container {
+            background-color: #f1f1f1;
+        }
+        .light-theme .search-input::placeholder {
+            color: #606060;
+        }
+        .light-theme .recent-searches, .light-theme .recently-watched, .light-theme .modal {
+            background-color: #ffffff;
+        }
+        .light-theme .search-item, .light-theme .channel-item {
+            background-color: #e5e5e5;
+        }
+        .light-theme .error {
+            color: #d32f2f;
+        }
+        .video-item:hover {
+            transform: scale(1.03);
+            transition: transform 0.2s ease-in-out;
+        }
+        .video-item img {
+            transition: opacity 0.2s;
+        }
+        .video-item:hover img {
+            opacity: 0.9;
+        }
+        #player-container iframe {
+            max-width: 100%;
+            width: 100%;
+            height: auto;
+            aspect-ratio: 16 / 9;
+            position: relative;
+            z-index: 10;
+        }
+        @media (max-width: 640px) {
+            #player-container iframe {
+                height: 200px;
+            }
+        }
+        #video-description {
+            white-space: pre-wrap;
+            max-width: 100%;
+            padding: 8px 0;
+        }
+        .search-icon {
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white"><path d="M15.5 14h-.79l-.28-.27a6.5 6.5 0 001.48-4.23A6.5 6.5 0 009.5 3 6.5 6.5 0 003 9.5a6.5 6.5 0 006.5 6.5c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>');
+            background-size: 20px;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        .light-theme .search-icon {
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="black"><path d="M15.5 14h-.79l-.28-.27a6.5 6.5 0 001.48-4.23A6.5 6.5 0 009.5 3 6.5 6.5 0 003 9.5a6.5 6.5 0 006.5 6.5c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>');
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .logo-icon {
+            background-color: #ff0000;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            font-weight: 700;
+            color: white;
+        }
+        .history-bar {
+            display: flex;
+            overflow-x: auto;
+            gap: 16px;
+            padding-bottom: 8px;
+            scrollbar-width: thin;
+        }
+        .history-bar::-webkit-scrollbar {
+            height: 8px;
+        }
+        .history-bar::-webkit-scrollbar-thumb {
+            background: #606060;
+            border-radius: 4px;
+        }
+        .moon-icon {
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="black"><path d="M12 3c-4.97 0-9 4.03-9 9s4.03 9 9 9c.83 0 1.64-.13 2.41-.34-3.88-.76-6.91-4.12-6.91-8.16 0-4.04 3.03-7.4 6.91-8.16-.77-.21-1.58-.34-2.41-.34zm0 16c-3.86 0-7-3.14-7-7s3.14-7 7-7 7 3.14 7 7-3.14 7-7 7z"/></svg>');
+            background-size: 20px;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        .sun-icon {
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white"><path d="M12 8c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4zm-7 7H3v2h2v-2zm0-4H3v2h2v-2zm0-4H3v2h2v-2zm12 8h2v-2h-2v2zm0-4h2v-2h-2v2zm0-4h2v-2h-2v2zm-4 8v2h2v-2h-2zm-4 0v2h2v-2h-2zm-4 0v2h2v-2h-2z"/></svg>');
+            background-size: 20px;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        .modal {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #181818;
+            padding: 20px;
+            border-radius: 8px;
+            z-index: 1000;
+            max-width: 90%;
+            width: 500px;
+        }
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+        }
+        .channel-item {
+            background-color: #282828;
+            padding: 10px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+        .channel-item:hover {
+            background-color: #383838;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col p-4">
+    <header class="flex items-center justify-between mb-6 max-w-5xl mx-auto w-full">
+        <div class="logo">
+            <div class="logo-icon">P</div>
+            <span>PriveTube</span>
         </div>
-        <div class="header-buttons">
-            <i class="fas fa-search search-icon" aria-label="Search"></i>
+        <div class="flex items-center gap-4">
+            <div id="search-container" class="flex items-center bg-gray-800 rounded-full p-2 w-full max-w-md search-container">
+                <input type="text" id="search-input" placeholder="Zoek video's of kanalen (@kanaalnaam)..." class="flex-grow bg-transparent text-white placeholder-gray-400 p-3 focus:outline-none search-input">
+                <button id="search-button" class="bg-red-600 w-12 h-12 rounded-full search-icon hover:bg-red-700"></button>
+            </div>
+            <button id="moon-toggle" class="w-10 h-10 rounded-full moon-icon hover:bg-gray-700 hidden" title="Donker thema"></button>
+            <button id="sun-toggle" class="w-10 h-10 rounded-full sun-icon hover:bg-gray-700" title="Licht thema"></button>
+            <button id="admin-login-button" class="text-white px-4 py-2 rounded hover:bg-gray-700">Admin</button>
         </div>
     </header>
-
-    <!-- Navigation Section -->
-    <nav class="nav">
-        <ul class="nav-links">
-            <li><a href="#basel">Basel 2025</a></li>
-            <li><a href="#newsletters">Latest - Newsletters</a></li>
-            <li><a href="#songs">Songs</a></li>
-            <li><a href="#participants">Participants</a></li>
-            <li><a href="#social">Social</a></li>
-            <li><a href="#history">History</a></li>
-            <li><a href="#about">About</a></li>
-        </ul>
-    </nav>
-
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-overlay">
-            <h1>Basel 2025</h1>
-            <p>Get ready for the ultimate music celebration from May 13-17, 2025!</p>
+    <div id="admin-login-modal" class="modal hidden">
+        <h2 class="text-2xl font-semibold mb-4">Admin Login</h2>
+        <input type="text" id="admin-username" placeholder="Gebruikersnaam" class="p-3 rounded bg-gray-700 text-white w-full mb-2">
+        <input type="password" id="admin-password" placeholder="Wachtwoord" class="p-3 rounded bg-gray-700 text-white w-full mb-2">
+        <p id="admin-login-error" class="text-red-500 hidden mb-2"></p>
+        <button id="admin-login-submit" class="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700">Inloggen</button>
+        <button id="admin-login-cancel" class="text-blue-400 hover:underline mt-2">Annuleren</button>
+    </div>
+    <div id="admin-panel-modal" class="modal hidden">
+        <h2 class="text-2xl font-semibold mb-4">Admin Paneel</h2>
+        <div class="mb-4">
+            <h3 class="text-lg font-semibold">IP Adres Bannen</h3>
+            <input type="text" id="ban-ip-input" placeholder="IP adres (bijv. 192.168.1.100)" class="p-3 rounded bg-gray-700 text-white w-full mb-2">
+            <button id="ban-ip-button" class="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700">Ban IP</button>
+            <ul id="banned-ips" class="mt-2"></ul>
         </div>
-    </section>
-
-    <!-- Basel 2025 Section -->
-    <section id="basel" class="section">
-        <h2>Robloxia 2025</h2>
-        <img src="no.png" alt="Basel cityscape">
-        <p>Join us in Robloxia, Roblox, for Rovision 2025! The event will light up at the St. Joel Halle from May 25 - June 17, 2025, with stunning performances along the Rhine. Expect a vibrant Rovision Village and more!</p>
-    </section>
-
-    <!-- Latest - Newsletters Section -->
-    <section id="newsletters" class="newsletter-section">
-        <h2>Latest - Newsletters</h2>
-        <div class="carousel-container">
-            <button class="carousel-arrow arrow-left" onclick="scrollCarousel(-1)">❮</button>
-            <div class="newsletter-carousel" id="newsletterCarousel">
-                <!-- Newsletter Entry 1 -->
-                <div class="newsletter-item" onclick="openModal('Rehearsals, kick off!', 'Artists are preparing to get qualified for the grand final - who will win and who will lose?')">
-                    <img src="albania.jpg" alt="Rehearsal stage">
-                    <div class="newsletter-content">
-                        <h3>Albania's Masterpiece</h3>
-                        <p>Recently, Albania surprised the whole jury and public with their amazing song. "Zjerm" by Shkodra Elektronike is an amazing song teaching you what the real world really is. Beatrice Gjerg on Roblox sang this song in Rehearsal 2, and we're proud to make her the winner. No confetti this time tho!</p>
-                        <span class="date">May 26, 2025</span>
-                    </div>
-                </div>
-                <!-- Newsletter Entry 2 -->
-                <div class="newsletter-item" onclick="openModal('Stage Setup Unveiled', 'The stage design for Rovision 2025 has been revealed! Check out the innovative lighting and effects planned for the event.')">
-                    <img src="yes.png" alt="Stage setup">
-                    <div class="newsletter-content">
-                        <h3>Stage Setup Unveiled</h3>
-                        <p>Check out the innovative stage design!</p>
-                        <span class="date">May 24, 2025</span>
-                    </div>
-                </div>
-                <!-- Newsletter Entry 3 -->
-                <div class="newsletter-item" onclick="openModal('Artist Lineup Announced', 'We’ve just announced the first batch of artists for Rovision 2025. Stay tuned for more updates!')">
-                    <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=150&q=80" alt="Artist announcement">
-                    <div class="newsletter-content">
-                        <h3>Artist Lineup Announced</h3>
-                        <p>First batch of artists revealed!</p>
-                        <span class="date">May 23, 2025</span>
-                    </div>
-                </div>
-                <!-- Newsletter Entry 4 -->
-                <div class="newsletter-item" onclick="openModal('Fan Event Planned', 'Join us for a special fan event in Basel’s Eurovision Village on May 10, 2025!')">
-                    <img src="https://images.unsplash.com/photo-1506157786151-b8491531f063?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=150&q=80" alt="Fan event">
-                    <div class="newsletter-content">
-                        <h3>Fan Event Planned</h3>
-                        <p>Special fan event in Basel on May 10!</p>
-                        <span class="date">May 22, 2025</span>
-                    </div>
-                </div>
-            </div>
-            <button class="carousel-arrow arrow-right" onclick="scrollCarousel(1)">❯</button>
+        <div class="mb-4">
+            <h3 class="text-lg font-semibold">Actieve Sessies</h3>
+            <ul id="sessions-list" class="mb-2"></ul>
         </div>
-    </section>
-
-    <!-- Modal for Newsletter Details -->
-    <div class="modal" id="newsletterModal">
-        <div class="modal-content">
-            <span class="close-modal" onclick="closeModal()">×</span>
-            <h3 id="modalTitle"></h3>
-            <p id="modalContent"></p>
+        <div class="mb-4">
+            <h3 class="text-lg font-semibold">Website Lockdown</h3>
+            <button id="toggle-lockdown" class="bg-gray-700 text-white px-4 py-2 rounded hover:bg-gray-600"></button>
+        </div>
+        <div class="mb-4">
+            <h3 class="text-lg font-semibold">Zoekopdrachten Beperken</h3>
+            <input type="text" id="ban-search-input" placeholder="Zoekterm" class="p-3 rounded bg-gray-700 text-white w-full mb-2">
+            <select id="ban-duration" class="p-3 rounded bg-gray-700 text-white w-full mb-2">
+                <option value="permanent">Permanent</option>
+                <option value="1h">1 Uur</option>
+                <option value="24h">24 Uur</option>
+            </select>
+            <button id="ban-search-button" class="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700">Beperk Zoekterm</button>
+            <ul id="banned-searches" class="mt-2"></ul>
+        </div>
+        <button id="admin-logout" class="bg-gray-700 text-white px-4 py-2 rounded hover:bg-gray-600">Uitloggen</button>
+    </div>
+    <div id="modal-overlay" class="modal-overlay hidden"></div>
+    <div id="main-content" class="w-full max-w-5xl mx-auto">
+        <button id="back-button" class="hidden mb-4 text-blue-400 hover:underline">Terug naar start</button>
+        <div id="channel-bar" class="mb-6 hidden">
+            <h2 class="text-lg font-semibold mb-2">Kanaal</h2>
+            <div id="channel-info" class="channel-item"></div>
+        </div>
+        <div id="recent-searches" class="mb-6 hidden recent-searches">
+            <h2 class="text-lg font-semibold mb-2">Recente zoekopdrachten</h2>
+            <div id="search-list" class="flex flex-wrap gap-2"></div>
+        </div>
+        <div id="recently-watched" class="mb-6 hidden recently-watched">
+            <h2 class="text-lg font-semibold mb-2">Recent bekeken</h2>
+            <div id="history-list" class="history-bar"></div>
+        </div>
+        <div id="loading" class="hidden text-center text-gray-400 mb-4">Laden...</div>
+        <div id="error" class="hidden text-center text-red-500 mb-4"></div>
+        <div id="recommended" class="mb-6">
+            <h2 class="text-lg font-semibold mb-2">Aanbevolen video's</h2>
+            <div id="recommended-videos" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4"></div>
+        </div>
+        <div id="results" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 hidden"></div>
+        <div id="player-container" class="mt-6"></div>
+        <div id="video-details" class="mt-4 hidden">
+            <h2 id="video-channel" class="text-lg font-semibold"></h2>
+            <p id="video-description" class="text-gray-400"></p>
         </div>
     </div>
 
-    <!-- Songs Section -->
-    <section id="songs" class="section">
-        <h2>Songs</h2>
-        <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=400&q=80" alt="Musical performance">
-        <p>Check out the amazing songs for Rovision 2025! From pop hits to soulful ballads, here are some highlights:</p>
-        <ul id="songList">
-            <li>Zjerm - Albania</li>
-            <li>Serving - Malta</li>
-        </ul>
-    </section>
-
-    <!-- Participants Section -->
-    <section id="participants" class="section">
-        <h2>Participants</h2>
-        <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=400&q=80" alt="Artists on stage">
-        <p>Meet the talented artists from across the globe! Click below to view the full list of participants.</p>
-        <button class="view-btn" onclick="openParticipantsModal()">View All Participants</button>
-    </section>
-
-    <!-- Modal for Participants -->
-    <div class="modal" id="participantsModal">
-        <div class="modal-content">
-            <span class="close-modal" onclick="closeParticipantsModal()">×</span>
-            <h3>Participants List</h3>
-            <ul>
-                <li>🇦🇱 Albania: Shkodra Elektronike</li>
-                <li>🇲🇹 Malta: Missygirlf</li>
-            </ul>
-        </div>
-    </div>
-
-    <!-- Social Section -->
-    <section id="social" class="section">
-        <h2>Social</h2>
-        <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=400&q=80" alt="Social media event">
-        <p>Connect with Rovision 2025! Follow us for live updates and fan engagement:</p>
-        <ul class="social-links">
-            <li><a href="https://youtube.com">YouTube</a></li>
-            <li><a href="https://twitter.com">Twitter</a></li>
-            <li><a href="https://instagram.com">Instagram</a></li>
-        </ul>
-    </section>
-
-    <!-- History Section -->
-    <section id="history" class="section">
-        <h2>History</h2>
-        <img src="https://images.unsplash.com/photo-1506157786151-b8491531f063?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=400&q=80" alt="Historical event">
-        <p>Rovision began in 2025, uniting nations through music. Relive past victories and memorable moments from this growing celebration!</p>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="section">
-        <h2>About</h2>
-        <img src="maybe.png" alt="Event overview">
-        <p>Rovision 2025 is all about bringing cultures together through music! Hosted in Basel, expect a spectacular show with diverse performances and global unity.</p>
-    </section>
-
-    <!-- Font Awesome for Icons -->
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script src="https://www.youtube.com/iframe_api"></script>
     <script>
-        let currentIndex = 0;
-        const items = document.querySelectorAll('.newsletter-item');
-        const totalItems = items.length;
-        let isDragging = false;
-        let startPos = 0;
-        let currentTranslate = 0;
-        let prevTranslate = 0;
-        let animationID = 0;
+        const API_KEY = 'AIzaSyBbNPr-oDArkdv-6PmlaHHQC4T_Jo26ciI';
+        let playerReady = false;
+        const ADMIN_CREDENTIALS = { username: 'admin', password: simpleHash('admin123') };
 
-        const carousel = document.getElementById('newsletterCarousel');
-
-        function scrollCarousel(direction) {
-            currentIndex += direction;
-            if (currentIndex < 0) currentIndex = 0;
-            if (currentIndex > totalItems - 1) currentIndex = totalItems - 1;
-
-            const itemWidth = items[0].offsetWidth + 20; // Include margin
-            currentTranslate = -currentIndex * itemWidth;
-            prevTranslate = currentTranslate;
-            carousel.style.transform = `translateX(${currentTranslate}px)`;
+        // Simple hash function
+        function simpleHash(str) {
+            let hash = 0;
+            for (let i = 0; i < str.length; i++) {
+                hash = ((hash << 5) - hash) + str.charCodeAt(i);
+                hash |= 0;
+            }
+            return hash.toString(36);
         }
 
-        // Mouse drag functionality
-        carousel.addEventListener('mousedown', startDragging);
-        carousel.addEventListener('mouseup', stopDragging);
-        carousel.addEventListener('mouseleave', stopDragging);
-        carousel.addEventListener('mousemove', drag);
-
-        carousel.addEventListener('touchstart', startDragging);
-        carousel.addEventListener('touchend', stopDragging);
-        carousel.addEventListener('touchmove', drag);
-
-        function startDragging(e) {
-            isDragging = true;
-            startPos = getPositionX(e);
-            animationID = requestAnimationFrame(animation);
-            carousel.classList.add('grabbing');
+        // Mock IP address for user
+        function getMockIP() {
+            return `192.168.1.${Math.floor(Math.random() * 255)}`;
         }
 
-        function stopDragging() {
-            isDragging = false;
-            cancelAnimationFrame(animationID);
-            prevTranslate = currentTranslate;
-            carousel.classList.remove('grabbing');
-
-            const itemWidth = items[0].offsetWidth + 20;
-            currentIndex = Math.round(-currentTranslate / itemWidth);
-            if (currentIndex < 0) currentIndex = 0;
-            if (currentIndex > totalItems - 1) currentIndex = totalItems - 1;
-            currentTranslate = -currentIndex * itemWidth;
-            carousel.style.transform = `translateX(${currentTranslate}px)`;
+        // Check if user is banned or locked down
+        function checkAccess() {
+            const bannedIPs = JSON.parse(localStorage.getItem('bannedIPs') || '[]');
+            const isLockdown = localStorage.getItem('lockdown') === 'true';
+            const userIP = getMockIP();
+            if (bannedIPs.includes(userIP)) {
+                document.body.innerHTML = '<h1 class="text-center text-red-500">Toegang geweigerd: Uw IP is geband.</h1>';
+                return false;
+            }
+            if (isLockdown && !localStorage.getItem('adminLoggedIn')) {
+                document.body.innerHTML = '<h1 class="text-center text-red-500">Website is in lockdown.</h1>';
+                return false;
+            }
+            return true;
         }
 
-        function drag(e) {
-            if (isDragging) {
-                const currentPosition = getPositionX(e);
-                currentTranslate = prevTranslate + currentPosition - startPos;
+        // Initialize YouTube IFrame API
+        window.onYouTubeIframeAPIReady = function() {
+            playerReady = true;
+            console.log('YouTube IFrame API loaded');
+        };
+
+        // Apply theme from localStorage
+        function applyTheme() {
+            const theme = localStorage.getItem('theme') || 'dark';
+            document.body.className = `min-h-screen flex flex-col p-4 ${theme}-theme`;
+            document.getElementById('moon-toggle').classList.toggle('hidden', theme === 'dark');
+            document.getElementById('sun-toggle').classList.toggle('hidden', theme === 'light');
+        }
+
+        // Theme toggle
+        document.getElementById('moon-toggle').addEventListener('click', function() {
+            localStorage.setItem('theme', 'dark');
+            applyTheme();
+        });
+        document.getElementById('sun-toggle').addEventListener('click', function() {
+            localStorage.setItem('theme', 'light');
+            applyTheme();
+        });
+
+        // Admin login handling
+        document.getElementById('admin-login-button').addEventListener('click', function() {
+            document.getElementById('admin-login-modal').classList.remove('hidden');
+            document.getElementById('modal-overlay').classList.remove('hidden');
+        });
+        document.getElementById('admin-login-cancel').addEventListener('click', function() {
+            document.getElementById('admin-login-modal').classList.add('hidden');
+            document.getElementById('modal-overlay').classList.add('hidden');
+            document.getElementById('admin-login-error').classList.add('hidden');
+        });
+        document.getElementById('admin-login-submit').addEventListener('click', function() {
+            const username = document.getElementById('admin-username').value.trim();
+            const password = document.getElementById('admin-password').value;
+            const error = document.getElementById('admin-login-error');
+            if (username === ADMIN_CREDENTIALS.username && simpleHash(password) === ADMIN_CREDENTIALS.password) {
+                localStorage.setItem('adminLoggedIn', 'true');
+                document.getElementById('admin-login-modal').classList.add('hidden');
+                document.getElementById('modal-overlay').classList.add('hidden');
+                showAdminPanel();
+            } else {
+                error.textContent = 'Ongeldige inloggegevens.';
+                error.classList.remove('hidden');
+            }
+        });
+
+        // Admin panel functions
+        function showAdminPanel() {
+            document.getElementById('admin-panel-modal').classList.remove('hidden');
+            document.getElementById('modal-overlay').classList.remove('hidden');
+            updateBannedIPs();
+            updateSessions();
+            updateLockdownStatus();
+            updateBannedSearches();
+        }
+
+        document.getElementById('admin-logout').addEventListener('click', function() {
+            localStorage.removeItem('adminLoggedIn');
+            document.getElementById('admin-panel-modal').classList.add('hidden');
+            document.getElementById('modal-overlay').classList.add('hidden');
+        });
+
+        // IP banning
+        document.getElementById('ban-ip-button').addEventListener('click', function() {
+            const ip = document.getElementById('ban-ip-input').value.trim();
+            if (ip) {
+                let bannedIPs = JSON.parse(localStorage.getItem('bannedIPs') || '[]');
+                if (!bannedIPs.includes(ip)) {
+                    bannedIPs.push(ip);
+                    localStorage.setItem('bannedIPs', JSON.stringify(bannedIPs));
+                    updateBannedIPs();
+                    checkAccess();
+                }
+                document.getElementById('ban-ip-input').value = '';
+            }
+        });
+
+        function updateBannedIPs() {
+            const bannedIPs = JSON.parse(localStorage.getItem('bannedIPs') || '[]');
+            const list = document.getElementById('banned-ips');
+            list.innerHTML = '';
+            bannedIPs.forEach(ip => {
+                const li = document.createElement('li');
+                li.textContent = ip;
+                const unban = document.createElement('button');
+                unban.textContent = 'Opheffen';
+                unban.className = 'ml-2 text-blue-400 hover:underline';
+                unban.addEventListener('click', () => {
+                    bannedIPs.splice(bannedIPs.indexOf(ip), 1);
+                    localStorage.setItem('bannedIPs', JSON.stringify(bannedIPs));
+                    updateBannedIPs();
+                });
+                li.appendChild(unban);
+                list.appendChild(li);
+            });
+        }
+
+        // Session management
+        function updateSessions() {
+            const sessions = JSON.parse(localStorage.getItem('sessions') || '[]');
+            const list = document.getElementById('sessions-list');
+            list.innerHTML = '';
+            sessions.forEach((session, index) => {
+                const li = document.createElement('li');
+                li.textContent = `Apparaat: ${session.device}, IP: ${session.ip}, Tijd: ${session.time}`;
+                const lock = document.createElement('button');
+                lock.textContent = session.locked ? 'Ontgrendelen' : 'Vergrendelen';
+                lock.className = 'ml-2 text-blue-400 hover:underline';
+                lock.addEventListener('click', () => {
+                    sessions[index].locked = !sessions[index].locked;
+                    localStorage.setItem('sessions', JSON.stringify(sessions));
+                    updateSessions();
+                });
+                const remove = document.createElement('button');
+                remove.textContent = 'Verwijderen';
+                remove.className = 'ml-2 text-blue-400 hover:underline';
+                remove.addEventListener('click', () => {
+                    sessions.splice(index, 1);
+                    localStorage.setItem('sessions', JSON.stringify(sessions));
+                    updateSessions();
+                });
+                const ban = document.createElement('button');
+                ban.textContent = 'Ban IP';
+                ban.className = 'ml-2 text-blue-400 hover:underline';
+                ban.addEventListener('click', () => {
+                    let bannedIPs = JSON.parse(localStorage.getItem('bannedIPs') || '[]');
+                    if (!bannedIPs.includes(session.ip)) {
+                        bannedIPs.push(session.ip);
+                        localStorage.setItem('bannedIPs', JSON.stringify(bannedIPs));
+                        updateBannedIPs();
+                    }
+                });
+                li.appendChild(lock);
+                li.appendChild(remove);
+                li.appendChild(ban);
+                list.appendChild(li);
+            });
+        }
+
+        // Lockdown toggle
+        document.getElementById('toggle-lockdown').addEventListener('click', function() {
+            const isLockdown = localStorage.getItem('lockdown') === 'true';
+            localStorage.setItem('lockdown', !isLockdown);
+            updateLockdownStatus();
+            checkAccess();
+        });
+
+        function updateLockdownStatus() {
+            const isLockdown = localStorage.getItem('lockdown') === 'true';
+            document.getElementById('toggle-lockdown').textContent = isLockdown ? 'Lockdown Uitschakelen' : 'Lockdown Inschakelen';
+        }
+
+        // Search restrictions
+        document.getElementById('ban-search-button').addEventListener('click', function() {
+            const term = document.getElementById('ban-search-input').value.trim().toLowerCase();
+            const duration = document.getElementById('ban-duration').value;
+            if (term) {
+                let bannedSearches = JSON.parse(localStorage.getItem('bannedSearches') || '[]');
+                const expiry = duration === 'permanent' ? null : Date.now() + (duration === '1h' ? 3600000 : 86400000);
+                bannedSearches.push({ term, expiry });
+                localStorage.setItem('bannedSearches', JSON.stringify(bannedSearches));
+                updateBannedSearches();
+                document.getElementById('ban-search-input').value = '';
+            }
+        });
+
+        function updateBannedSearches() {
+            let bannedSearches = JSON.parse(localStorage.getItem('bannedSearches') || '[]');
+            const now = Date.now();
+            bannedSearches = bannedSearches.filter(s => !s.expiry || s.expiry > now);
+            localStorage.setItem('bannedSearches', JSON.stringify(bannedSearches));
+            const list = document.getElementById('banned-searches');
+            list.innerHTML = '';
+            bannedSearches.forEach((search, index) => {
+                const li = document.createElement('li');
+                li.textContent = `${search.term} (${search.expiry ? new Date(search.expiry).toLocaleString() : 'Permanent'})`;
+                const unban = document.createElement('button');
+                unban.textContent = 'Opheffen';
+                unban.className = 'ml-2 text-blue-400 hover:underline';
+                unban.addEventListener('click', () => {
+                    bannedSearches.splice(index, 1);
+                    localStorage.setItem('bannedSearches', JSON.stringify(bannedSearches));
+                    updateBannedSearches();
+                });
+                li.appendChild(unban);
+                list.appendChild(li);
+            });
+        }
+
+        // Load page
+        window.onload = function() {
+            if (!checkAccess()) return;
+            applyTheme();
+            loadRecommendedVideos();
+            loadRecentSearches();
+            loadRecentHistory();
+            // Initialize mock session
+            let sessions = JSON.parse(localStorage.getItem('sessions') || '[]');
+            if (!sessions.find(s => s.ip === getMockIP())) {
+                sessions.push({
+                    device: navigator.userAgent.includes('Mobile') ? 'Mobiel' : 'Desktop',
+                    ip: getMockIP(),
+                    time: new Date().toLocaleString(),
+                    locked: false
+                });
+                localStorage.setItem('sessions', JSON.stringify(sessions));
+            }
+        };
+
+        // Search on Enter
+        document.getElementById('search-input').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                document.getElementById('search-button').click();
+            }
+        });
+
+        // Search function
+        document.getElementById('search-button').addEventListener('click', async function() {
+            const query = document.getElementById('search-input').value.trim();
+            if (!query) {
+                showError('Voer een zoekterm in.');
+                return;
+            }
+
+            // Check banned searches
+            let bannedSearches = JSON.parse(localStorage.getItem('bannedSearches') || '[]');
+            const now = Date.now();
+            bannedSearches = bannedSearches.filter(s => !s.expiry || s.expiry > now);
+            localStorage.setItem('bannedSearches', JSON.stringify(bannedSearches));
+            if (bannedSearches.some(s => query.toLowerCase().includes(s.term))) {
+                showError('Deze zoekopdracht is niet toegestaan.');
+                return;
+            }
+
+            saveSearch(query);
+            const loadingDiv = document.getElementById('loading');
+            const errorDiv = document.getElementById('error');
+            const resultsDiv = document.getElementById('results');
+            const recommendedDiv = document.getElementById('recommended');
+            const recentSearchesDiv = document.getElementById('recent-searches');
+            const recentlyWatchedDiv = document.getElementById('recently-watched');
+            const playerContainer = document.getElementById('player-container');
+            const videoDetails = document.getElementById('video-details');
+            const backButton = document.getElementById('back-button');
+            const channelBar = document.getElementById('channel-bar');
+            const channelInfo = document.getElementById('channel-info');
+            loadingDiv.classList.remove('hidden');
+            errorDiv.classList.add('hidden');
+            resultsDiv.classList.remove('hidden');
+            recommendedDiv.classList.add('hidden');
+            recentSearchesDiv.classList.add('hidden');
+            recentlyWatchedDiv.classList.add('hidden');
+            playerContainer.classList.add('hidden');
+            videoDetails.classList.add('hidden');
+            backButton.classList.remove('hidden');
+            channelBar.classList.add('hidden');
+            resultsDiv.innerHTML = '';
+            channelInfo.innerHTML = '';
+
+            try {
+                if (query.startsWith('@')) {
+                    const channelQuery = query.slice(1);
+                    const channelResponse = await fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=1&q=${encodeURIComponent(channelQuery)}&type=channel&key=${API_KEY}`);
+                    if (!channelResponse.ok) throw new Error('Fout bij ophalen kanaal: ' + channelResponse.status);
+                    const channelData = await channelResponse.json();
+                    if (channelData.items && channelData.items.length > 0) {
+                        const channel = channelData.items[0].snippet;
+                        channelBar.classList.remove('hidden');
+                        channelInfo.innerHTML = `
+                            <img src="${channel.thumbnails.default.url}" alt="${channel.title}" class="w-12 h-12 rounded-full inline-block mr-2">
+                            <span>${channel.title}</span>
+                        `;
+                        channelInfo.addEventListener('click', () => {
+                            document.getElementById('search-input').value = '';
+                            searchChannelVideos(channel.channelId);
+                        });
+                    }
+                }
+
+                const response = await fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=12&q=${encodeURIComponent(query)}&type=video&key=${API_KEY}`);
+                if (!response.ok) throw new Error(response.status === 403 ? 'API-sleutel ongeldig of quotum overschreden.' : 'Netwerkfout.');
+                const data = await response.json();
+
+                if (!data.items || data.items.length === 0) {
+                    showError('Geen video’s gevonden.');
+                    loadingDiv.classList.add('hidden');
+                    return;
+                }
+
+                const videoIds = data.items.map(item => item.id.videoId).join(',');
+                const videoDetails = await fetch(`https://www.googleapis.com/youtube/v3/videos?part=status,snippet&id=${videoIds}&key=${API_KEY}`);
+                const videoData = await videoDetails.json();
+
+                loadingDiv.classList.add('hidden');
+                data.items.forEach((item, index) => {
+                    const videoId = item.id.videoId;
+                    const title = item.snippet.title;
+                    const thumbnail = item.snippet.thumbnails.medium.url;
+                    const channelTitle = item.snippet.channelTitle;
+                    const description = item.snippet.description;
+                    const isEmbeddable = videoData.items[index]?.status?.embeddable;
+
+                    if (isEmbeddable) {
+                        const videoDiv = document.createElement('div');
+                        videoDiv.className = 'video-item bg-gray-800 p-4 rounded-lg cursor-pointer';
+                        videoDiv.innerHTML = `
+                            <img src="${thumbnail}" alt="${title}" class="w-full rounded">
+                            <p class="mt-2 text-white font-medium">${title}</p>
+                            <p class="text-gray-400 text-sm">${channelTitle}</p>
+                        `;
+                        videoDiv.addEventListener('click', () => loadVideo(videoId, title, thumbnail, channelTitle, description));
+                        resultsDiv.appendChild(videoDiv);
+                    }
+                });
+
+                if (!resultsDiv.hasChildNodes()) {
+                    showError('Geen afspeelbare video’s gevonden.');
+                }
+            } catch (error) {
+                loadingDiv.classList.add('hidden');
+                showError('Fout bij ophalen video’s: ' + error.message);
+            }
+        });
+
+        // Search channel videos
+        async function searchChannelVideos(channelId) {
+            const loadingDiv = document.getElementById('loading');
+            const errorDiv = document.getElementById('error');
+            const resultsDiv = document.getElementById('results');
+            const recommendedDiv = document.getElementById('recommended');
+            const recentSearchesDiv = document.getElementById('recent-searches');
+            const recentlyWatchedDiv = document.getElementById('recently-watched');
+            const playerContainer = document.getElementById('player-container');
+            const videoDetails = document.getElementById('video-details');
+            const backButton = document.getElementById('back-button');
+            loadingDiv.classList.remove('hidden');
+            errorDiv.classList.add('hidden');
+            resultsDiv.classList.remove('hidden');
+            recommendedDiv.classList.add('hidden');
+            recentSearchesDiv.classList.add('hidden');
+            recentlyWatchedDiv.classList.add('hidden');
+            playerContainer.classList.add('hidden');
+            videoDetails.classList.add('hidden');
+            backButton.classList.remove('hidden');
+            resultsDiv.innerHTML = '';
+
+            try {
+                const response = await fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=12&channelId=${channelId}&type=video&key=${API_KEY}`);
+                if (!response.ok) throw new Error('Fout bij ophalen kanaalvideo’s: ' + response.status);
+                const data = await response.json();
+
+                if (!data.items || data.items.length === 0) {
+                    showError('Geen video’s gevonden voor dit kanaal.');
+                    loadingDiv.classList.add('hidden');
+                    return;
+                }
+
+                const videoIds = data.items.map(item => item.id.videoId).join(',');
+                const videoDetails = await fetch(`https://www.googleapis.com/youtube/v3/videos?part=status,snippet&id=${videoIds}&key=${API_KEY}`);
+                const videoData = await videoDetails.json();
+
+                loadingDiv.classList.add('hidden');
+                data.items.forEach((item, index) => {
+                    const videoId = item.id.videoId;
+                    const title = item.snippet.title;
+                    const thumbnail = item.snippet.thumbnails.medium.url;
+                    const channelTitle = item.snippet.channelTitle;
+                    const description = item.snippet.description;
+                    const isEmbeddable = videoData.items[index]?.status?.embeddable;
+
+                    if (isEmbeddable) {
+                        const videoDiv = document.createElement('div');
+                        videoDiv.className = 'video-item bg-gray-800 p-4 rounded-lg cursor-pointer';
+                        videoDiv.innerHTML = `
+                            <img src="${thumbnail}" alt="${title}" class="w-full rounded">
+                            <p class="mt-2 text-white font-medium">${title}</p>
+                            <p class="text-gray-400 text-sm">${channelTitle}</p>
+                        `;
+                        videoDiv.addEventListener('click', () => loadVideo(videoId, title, thumbnail, channelTitle, description));
+                        resultsDiv.appendChild(videoDiv);
+                    }
+                });
+
+                if (!resultsDiv.hasChildNodes()) {
+                    showError('Geen afspeelbare video’s gevonden.');
+                }
+            } catch (error) {
+                loadingDiv.classList.add('hidden');
+                showError('Fout bij ophalen video’s: ' + error.message);
             }
         }
 
-        function animation() {
-            carousel.style.transform = `translateX(${currentTranslate}px)`;
-            if (isDragging) requestAnimationFrame(animation);
+        // Load video
+        function loadVideo(videoId, title, thumbnail, channelTitle, description) {
+            const playerContainer = document.getElementById('player-container');
+            const videoDetails = document.getElementById('video-details');
+            const videoChannel = document.getElementById('video-channel');
+            const videoDescription = document.getElementById('video-description');
+            const errorDiv = document.getElementById('error');
+            const recommendedDiv = document.getElementById('recommended');
+            const recentSearchesDiv = document.getElementById('recent-searches');
+            const recentlyWatchedDiv = document.getElementById('recently-watched');
+            const resultsDiv = document.getElementById('results');
+            const backButton = document.getElementById('back-button');
+            const channelBar = document.getElementById('channel-bar');
+            playerContainer.innerHTML = '';
+            errorDiv.classList.add('hidden');
+            recommendedDiv.classList.add('hidden');
+            recentSearchesDiv.classList.add('hidden');
+            recentlyWatchedDiv.classList.add('hidden');
+            resultsDiv.classList.add('hidden');
+            channelBar.classList.add('hidden');
+            playerContainer.classList.remove('hidden');
+            videoDetails.classList.remove('hidden');
+            backButton.classList.remove('hidden');
+
+            saveToHistory(videoId, title, thumbnail);
+
+            if (!playerReady) {
+                showError('YouTube-speler wordt geladen. Even geduld...');
+                setTimeout(() => loadVideo(videoId, title, thumbnail, channelTitle, description), 1000);
+                return;
+            }
+
+            const iframe = document.createElement('iframe');
+            iframe.src = `https://www.youtube.com/embed/${videoId}?playsinline=1&rel=0&showinfo=0&enablejsapi=1`;
+            iframe.width = '640';
+            iframe.height = '360';
+            iframe.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture');
+            iframe.setAttribute('allowfullscreen', '');
+            iframe.setAttribute('frameborder', '0');
+            playerContainer.appendChild(iframe);
+
+            videoChannel.textContent = channelTitle;
+            videoDescription.textContent = description || 'Geen beschrijving beschikbaar.';
         }
 
-        function getPositionX(e) {
-            return e.type.includes('mouse') ? e.pageX : e.touches[0].clientX;
-        }
-
-        function openModal(title, content) {
-            document.getElementById('modalTitle').textContent = title;
-            document.getElementById('modalContent').textContent = content;
-            document.getElementById('newsletterModal').style.display = 'flex';
-        }
-
-        function closeModal() {
-            document.getElementById('newsletterModal').style.display = 'none';
-        }
-
-        function openParticipantsModal() {
-            document.getElementById('participantsModal').style.display = 'flex';
-        }
-
-        function closeParticipantsModal() {
-            document.getElementById('participantsModal').style.display = 'none';
-        }
-
-        document.addEventListener('DOMContentLoaded', () => {
-            document.querySelectorAll('.nav-links a').forEach(anchor => {
-                anchor.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    const targetId = this.getAttribute('href').substring(1);
-                    const targetElement = document.getElementById(targetId);
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 80,
-                        behavior: 'smooth'
-                    });
-                });
-            });
+        // Back to start
+        document.getElementById('back-button').addEventListener('click', function() {
+            const playerContainer = document.getElementById('player-container');
+            const videoDetails = document.getElementById('video-details');
+            const recommendedDiv = document.getElementById('recommended');
+            const recentSearchesDiv = document.getElementById('recent-searches');
+            const recentlyWatchedDiv = document.getElementById('recently-watched');
+            const resultsDiv = document.getElementById('results');
+            const backButton = document.getElementById('back-button');
+            const channelBar = document.getElementById('channel-bar');
+            playerContainer.innerHTML = '';
+            playerContainer.classList.add('hidden');
+            videoDetails.classList.add('hidden');
+            recommendedDiv.classList.remove('hidden');
+            recentSearchesDiv.classList.remove('hidden');
+            recentlyWatchedDiv.classList.remove('hidden');
+            resultsDiv.classList.add('hidden');
+            backButton.classList.add('hidden');
+            channelBar.classList.add('hidden');
+            loadRecentSearches();
+            loadRecentHistory();
         });
+
+        // Save and load recent searches
+        function saveSearch(query) {
+            let searches = JSON.parse(localStorage.getItem('recentSearches') || '[]');
+            if (!searches.includes(query)) {
+                searches.unshift(query);
+                searches = searches.slice(0, 5);
+                localStorage.setItem('recentSearches', JSON.stringify(searches));
+            }
+            loadRecentSearches();
+        }
+
+        function loadRecentSearches() {
+            const searches = JSON.parse(localStorage.getItem('recentSearches') || '[]');
+            const searchList = document.getElementById('search-list');
+            const recentSearchesDiv = document.getElementById('recent-searches');
+            searchList.innerHTML = '';
+            if (searches.length > 0) {
+                recentSearchesDiv.classList.remove('hidden');
+                searches.forEach(query => {
+                    const searchItem = document.createElement('button');
+                    searchItem.className = 'bg-gray-700 text-white px-4 py-2 rounded-full text-sm hover:bg-gray-600 search-item';
+                    searchItem.textContent = query;
+                    searchItem.addEventListener('click', () => {
+                        document.getElementById('search-input').value = query;
+                        document.getElementById('search-button').click();
+                    });
+                    searchList.appendChild(searchItem);
+                });
+            }
+        }
+
+        // Save and load recent watch history
+        function saveToHistory(videoId, title, thumbnail) {
+            let history = JSON.parse(localStorage.getItem('watchHistory') || '[]');
+            history = history.filter(item => item.videoId !== videoId);
+            history.unshift({ videoId, title, thumbnail });
+            history = history.slice(0, 5);
+            localStorage.setItem('watchHistory', JSON.stringify(history));
+            loadRecentHistory();
+        }
+
+        function loadRecentHistory() {
+            const history = JSON.parse(localStorage.getItem('watchHistory') || '[]');
+            const historyList = document.getElementById('history-list');
+            const recentlyWatchedDiv = document.getElementById('recently-watched');
+            historyList.innerHTML = '';
+            if (history.length > 0) {
+                recentlyWatchedDiv.classList.remove('hidden');
+                history.forEach(item => {
+                    const videoDiv = document.createElement('div');
+                    videoDiv.className = 'video-item bg-gray-800 p-4 rounded-lg cursor-pointer min-w-[200px] history-item';
+                    videoDiv.innerHTML = `
+                        <img src="${item.thumbnail}" alt="${item.title}" class="w-full rounded">
+                        <p class="mt-2 text-white font-medium">${item.title}</p>
+                    `;
+                    videoDiv.addEventListener('click', () => loadVideo(item.videoId, item.title, item.thumbnail, item.channelTitle, item.description));
+                    historyList.appendChild(videoDiv);
+                });
+            }
+        }
+
+        // Load recommended videos
+        async function loadRecommendedVideos() {
+            try {
+                const response = await fetch(`https://www.googleapis.com/youtube/v3/videos?part=snippet,status&chart=mostPopular&maxResults=12&key=${API_KEY}`);
+                if (!response.ok) throw new Error('Fout bij ophalen aanbevolen video’s: ' + response.status);
+                const data = await response.json();
+
+                const recommendedDiv = document.getElementById('recommended-videos');
+                data.items.forEach(item => {
+                    if (item.status.embeddable) {
+                        const videoId = item.id;
+                        const title = item.snippet.title;
+                        const thumbnail = item.snippet.thumbnails.medium.url;
+                        const channelTitle = item.snippet.channelTitle;
+                        const description = item.snippet.description;
+
+                        const videoDiv = document.createElement('div');
+                        videoDiv.className = 'video-item bg-gray-800 p-4 rounded-lg cursor-pointer';
+                        videoDiv.innerHTML = `
+                            <img src="${thumbnail}" alt="${title}" class="w-full rounded">
+                            <p class="mt-2 text-white font-medium">${title}</p>
+                            <p class="text-gray-400 text-sm">${channelTitle}</p>
+                        `;
+                        videoDiv.addEventListener('click', () => loadVideo(videoId, title, thumbnail, channelTitle, description));
+                        recommendedDiv.appendChild(videoDiv);
+                    }
+                });
+            } catch (error) {
+                showError('Fout bij ophalen aanbevolen video’s: ' + error.message);
+            }
+        }
+
+        // Show error
+        function showError(message) {
+            const errorDiv = document.getElementById('error');
+            errorDiv.textContent = message;
+            errorDiv.classList.remove('hidden');
+        }
     </script>
 </body>
 </html>
